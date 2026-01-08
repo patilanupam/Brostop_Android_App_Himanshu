@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_bg">#0F0F0F</color>
+    <color name="card_surface">#1A1A1A</color>
+    <color name="neon_lime">#CCFF00</color>
+    <color name="neon_dim">#668000</color>
+    <color name="white_text">#FFFFFF</color>
+    <color name="grey_hint">#808080</color>
+    <color name="error_red">#FF4444</color>
+    <color name="transparent">#00000000</color>
+    
+    <color name="purple_200">#CCFF00</color>
+    <color name="purple_500">#CCFF00</color>
+    <color name="purple_700">#668000</color>
+    <color name="teal_200">#CCFF00</color>
+    <color name="teal_700">#668000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

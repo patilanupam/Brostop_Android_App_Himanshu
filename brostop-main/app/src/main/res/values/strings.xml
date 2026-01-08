@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">bro stop</string>
+    <string-array name="initial_slider_values">
+        <item>20</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="initial_time_values">
+        <item>5</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="shame_sentences">
+        <item>I have the attention span of a goldfish.</item>
+        <item>I am addicted to scrolling and I need help.</item>
+        <item>My dopamine receptors are fried.</item>
+        <item>I would rather scroll than build my future.</item>
+        <item>I am weak and I surrender to the algorithm.</item>
+        <item>This app is smarter than me.</item>
+        <item>I promise to touch grass after this.</item>
+        <item>I am wasting my potential one swipe at a time.</item>
+        <item>Brainrot is my favorite hobby.</item>
+        <item>I have no self control whatsoever.</item>
+        <item>I am letting a machine control my life.</item>
+        <item>I am voluntarily lowering my IQ right now.</item>
+        <item>I choose temporary pleasure over long term goals.</item>
+        <item>My ancestors are disappointed in me.</item>
+        <item>I am a slave to the notification badge.</item>
+        <item>Reality is too boring for me.</item>
+        <item>I need this digital pacifier to function.</item>
+        <item>I am procrastinating on my dreams.</item>
+        <item>Please unlock, I have zero discipline.</item>
+        <item>I admit that I am doomscrolling again.</item>
+    </string-array>
+</resources>

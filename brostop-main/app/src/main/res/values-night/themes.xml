@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.BroStop" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/neon_lime</item>
+        <item name="android:statusBarColor">@color/black_bg</item>
+        <item name="android:windowBackground">@color/black_bg</item>
+    </style>
+
+    <style name="Theme.BroStop" parent="Base.Theme.BroStop" />
+    
+    <style name="NeonChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_state_selector</item>
+        <item name="android:textColor">@color/text_state_selector</item>
+        <item name="chipCornerRadius">12dp</item>
+        <item name="chipStrokeColor">@color/neon_lime</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+</resources>

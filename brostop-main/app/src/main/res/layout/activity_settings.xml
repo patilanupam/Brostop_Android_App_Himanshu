@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SYSTEM CONFIG"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/neon_lime"
+            android:textSize="28sp"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PENALTY TIMER (Cooldown)"
+            android:textColor="@color/white_text"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time blocked after getting kicked out."
+            android:textColor="@color/grey_hint"
+            android:textSize="12sp"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cgPenalty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+            
+            <com.google.android.material.chip.Chip 
+                android:id="@+id/chipPenaltyNone"
+                style="@style/NeonChip" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:text="None (0m)" 
+                android:tag="0" />
+
+            <com.google.android.material.chip.Chip 
+                android:id="@+id/chipPenaltyShort"
+                style="@style/NeonChip" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:text="Short (2m)" 
+                android:tag="2" />
+
+            <com.google.android.material.chip.Chip 
+                android:id="@+id/chipPenaltyStrict"
+                style="@style/NeonChip" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:text="Strict (10m)" 
+                android:tag="10" />
+
+            <com.google.android.material.chip.Chip 
+                android:id="@+id/chipPenaltyLockdown"
+                style="@style/NeonChip" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:text="Lockdown (30m)" 
+                android:tag="30" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PLEA BARGAIN"
+                    android:textColor="@color/white_text"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable gambling for extra time"
+                    android:textColor="@color/grey_hint"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchPlea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:thumbTint="@color/switch_thumb_selector"
+                app:trackTint="@color/switch_track_selector"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutBonusDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:paddingStart="16dp"
+            android:visibility="visible">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BONUS DURATION (If you win)"
+                android:textColor="@color/neon_lime"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgBonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+                
+                <com.google.android.material.chip.Chip 
+                    android:id="@+id/chipBonusShort"
+                    style="@style/NeonChip" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content"
+                    android:text="2 Minutes" 
+                    android:tag="2" />
+                    
+                <com.google.android.material.chip.Chip 
+                    android:id="@+id/chipBonusLong"
+                    style="@style/NeonChip" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content"
+                    android:text="5 Minutes" 
+                    android:tag="5" />
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL LOCKDOWN"
+                    android:textColor="@color/white_text"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Block all apps during penalty"
+                    android:textColor="@color/grey_hint"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swPunishmentScope"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:thumbTint="@color/switch_thumb_selector"
+                app:trackTint="@color/switch_track_selector"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Haptic Feedback"
+                    android:textColor="@color/white_text"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buzz when caught"
+                    android:textColor="@color/grey_hint"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchVibration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:thumbTint="@color/switch_thumb_selector"
+                app:trackTint="@color/switch_track_selector"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMERGENCY UNLOCK"
+            android:textColor="@color/white_text"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgEmergency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbWeak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weak (Simple Button)"
+                android:textColor="@color/white_text"
+                android:buttonTint="@color/neon_lime"
+                android:padding="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbShame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shame (Type Sentence)"
+                android:textColor="@color/white_text"
+                android:buttonTint="@color/neon_lime"
+                android:padding="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbImpossible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Mercy (Impossible)"
+                android:textColor="@color/white_text"
+                android:buttonTint="@color/neon_lime"
+                android:padding="8dp"/>
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="SAVE &amp; EXIT"
+            android:textColor="@color/black_bg"
+            android:backgroundTint="@color/neon_lime"
+            app:cornerRadius="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

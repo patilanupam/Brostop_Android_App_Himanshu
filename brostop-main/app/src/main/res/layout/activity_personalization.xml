@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="REFINING ALGORITHM (2/2)"
+            android:textColor="@color/neon_lime"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLASS (Pick One)"
+            android:textColor="@color/white_text"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupOccupation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Student" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Corporate" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Founder" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Freelancer" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Unemployed" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trader/Crypto" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Business-men" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECT HOBBIES (Max 3)"
+            android:textColor="#CCFFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cgHobbies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HUMOR SETTINGS"
+            android:textColor="@color/white_text"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupHumor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false">
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sarcastic" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dark" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Desi/Indian" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Brainrot" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aggressive" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wholesome" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Absurdist" />
+            <com.google.android.material.chip.Chip style="@style/NeonChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Philosophical" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnInitialize"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="INITIALIZE PROTOCOL"
+            android:textColor="@color/black_bg"
+            android:backgroundTint="@color/neon_lime"
+            app:cornerRadius="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
